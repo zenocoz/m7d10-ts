@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react"
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./App.css"
+import MyNavbar from "./components/Navbar/Navbar"
+import Home from "./components/Home/Home"
+import {Container, Row, Col} from "react-bootstrap"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Container className="container-fluid">
+      <Row>
+        <Col className="lg-12 md-8 sm-3 xs-2">
+          <MyNavbar />
+        </Col>
+      </Row>
+
+      <Row>
+        <Col className="mt-3 offset-4">
+          <Home />
+        </Col>
+      </Row>
+    </Container>
+
+    // <div className="App">
+    //   <MyNavbar />
+    // </div>
+  )
 }
 
-export default App;
+export default App
