@@ -1,19 +1,15 @@
-import React, {useState, useEffect} from "react"
-import {Navbar, Nav, Form, FormControl, Button} from "react-bootstrap"
+import {Navbar, Nav} from "react-bootstrap"
+import SearchBar from "../SearchBar/SearchBar"
 
 const MyNavbar = () => {
-  const [keyword, setKeyword] = useState("")
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>): void => {
-    setKeyword(e.target.value)
-  }
-
   return (
     <Navbar bg="dark" variant="dark">
       <Navbar.Brand href="#home">Navbar</Navbar.Brand>
       <Nav className="mr-auto">
         <Nav.Link href="#home">Home</Nav.Link>
       </Nav>
-      <Form inline>
+      <SearchBar />
+      {/* <Form inline>
         <FormControl
           type="text"
           placeholder="Search"
@@ -22,7 +18,7 @@ const MyNavbar = () => {
           className="mr-sm-2"
         />
         <Button variant="outline-info">Search</Button>
-      </Form>
+      </Form> */}
     </Navbar>
   )
 }
